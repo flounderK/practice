@@ -7,8 +7,10 @@ Created on Sun Feb  4 16:54:51 2018
 
 def find_largest_prime_factor(number):
     def is_prime(number):
+        if number==1:
+            return False
         for i in range(2,number):
-            if (not number % i) and (i!=1):
+            if (not number % i):
                 return False
         return True
     
